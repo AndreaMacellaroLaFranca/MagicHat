@@ -5,9 +5,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class MagicHat {
-    public static void main(String[] Args){
 
-        String[]studentsName = new String[]{"Mirko Risuleo", "Karen Russo", "Salvatore Tavella", "Alessia Pallavera", "Pierluigi Micozzi", "Eleonora Siciliano", "Gianluca Pricopie", "Miryam Massa", "Pamela Milanese", "Ejran Mustafoski", "Andrea Macellaro La Franca", "Alessandro Massa", "Pietro Marinari", "Alessandro Stelitano", "Stefano Puro", "Lucrezia Lauri", "Mario Peccio", "Lorenzo Masci", "Danilo Vulpiani", "Carlotta Pisano", "Ilies Chikhaoui", "Samuele Celletti", "Gabriele Sabatini", "Joshua Castellani", "Macali Roberto", "Lorenzo Salvatori", "Marco Falconetti", "Luca Galimberti", "Matteo Fratti"};
+    static String[] studentsName = new String[]{"Mirko Risuleo", "Karen Russo", "Salvatore Tavella", "Alessia Pallavera", "Pierluigi Micozzi", "Eleonora Siciliano", "Gianluca Pricopie", "Miryam Massa", "Pamela Milanese", "Ejran Mustafoski", "Andrea Macellaro La Franca", "Alessandro Massa", "Pietro Marinari", "Alessandro Stelitano", "Stefano Puro", "Lucrezia Lauri", "Mario Peccio", "Lorenzo Masci", "Danilo Vulpiani", "Carlotta Pisano", "Ilies Chikhaoui", "Samuele Celletti", "Gabriele Sabatini", "Joshua Castellani", "Macali Roberto", "Lorenzo Salvatori", "Marco Falconetti", "Luca Galimberti", "Matteo Fratti"};
+
+    static int numHouses = 4;
+    static int houseSize = studentsName.length/numHouses;
+
+    public static void main(String[] Args){
 
         //RANDOMIZER ARRAY STUDENTI
         List<String> StringList = Arrays.asList(studentsName);
@@ -16,69 +20,61 @@ public class MagicHat {
 
         //FORMATTAZIONE E STAMPA
         System.out.println("\t\t\t\t\t\t\t\t\t\tHUFFLEPUFF");
-        System.out.println(Arrays.toString(HufflePuff(studentsName)));
+        System.out.println(Arrays.toString(createHufflePuff()));
         System.out.println("\n");
 
         System.out.println("\t\t\t\t\t\t\t\t\t\tRAVENCLAW");
-        System.out.println(Arrays.toString(RavenClaw(studentsName)));
+        System.out.println(Arrays.toString(createRavenClaw()));
         System.out.println("\n");
 
         System.out.println("\t\t\t\t\t\t\t\t\t\tSLYTHERIN");
-        System.out.println(Arrays.toString(Slytherin(studentsName)));
+        System.out.println(Arrays.toString(createSlytherin()));
         System.out.println("\n");
 
         System.out.println("\t\t\t\t\t\t\t\t\t\tGRYFFINDOR");
-        System.out.println(Arrays.toString(Gryffindor(studentsName)));
+        System.out.println(Arrays.toString(createGryffindor()));
         System.out.println("\n");
 
     }
 
-    public static String[] HufflePuff(String[]studentsName){
+    public static String[] createHufflePuff(){
 
         String[] hufflePuff = new String[7];
 
-        for (int i = 0; i<studentsName.length; i++) {
-            if (i < 7) {
+        for (int i = 0; i<houseSize; i++) {
                 hufflePuff[i] = studentsName[i];
-            }
         }
         return hufflePuff;
     }
 
-    public static String[] RavenClaw(String[]studentsName){
+    public static String[] createRavenClaw(){
 
-        String[] RavenClaw = new String[7];
+        String[] ravenClaw = new String[7];
 
-        for (int i = 0; i<studentsName.length; i++) {
-            if (i >=7 && i<14) {
-                RavenClaw[i-7] = studentsName[i];
-            }
+        for (int i = houseSize; i<2*houseSize; i++) {
+                ravenClaw[i-7] = studentsName[i];
         }
-        return RavenClaw;
+        return ravenClaw;
     }
 
-    public static String[] Slytherin(String[]studentsName){
+    public static String[] createSlytherin(){
 
-        String[] Slytherin = new String[7];
+        String[] slytherin = new String[7];
 
-        for (int i = 0; i<studentsName.length; i++) {
-            if (i >= 14 && i<21) {
-                Slytherin[i-14] = studentsName[i];
-            }
+        for (int i = 2*houseSize; i<3*houseSize; i++) {
+                slytherin[i-14] = studentsName[i];
         }
-        return Slytherin;
+        return slytherin;
     }
 
-    public static String[] Gryffindor(String[]studentsName){
+    public static String[] createGryffindor(){
 
-        String[] Gryffindor = new String[8];
+        String[] gryffindor = new String[8];
 
-        for (int i = 0; i<studentsName.length; i++) {
-            if (i >= 21 && i<29) {
-                Gryffindor[i-21] = studentsName[i];
-            }
+        for (int i = 3*houseSize; i<4*houseSize+1; i++) {
+                gryffindor[i-21] = studentsName[i];
         }
-        return Gryffindor;
+        return gryffindor;
     }
 
 }
