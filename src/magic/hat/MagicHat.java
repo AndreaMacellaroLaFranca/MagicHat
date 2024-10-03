@@ -7,7 +7,6 @@ import java.util.List;
 public class MagicHat {
 
     static String[] studentsName = new String[]{"Mirko Risuleo", "Karen Russo", "Salvatore Tavella", "Alessia Pallavera", "Pierluigi Micozzi", "Eleonora Siciliano", "Gianluca Pricopie", "Miryam Massa", "Pamela Milanese", "Ejran Mustafoski", "Andrea Macellaro La Franca", "Alessandro Massa", "Pietro Marinari", "Alessandro Stelitano", "Stefano Puro", "Lucrezia Lauri", "Mario Peccio", "Lorenzo Masci", "Danilo Vulpiani", "Carlotta Pisano", "Ilies Chikhaoui", "Samuele Celletti", "Gabriele Sabatini", "Joshua Castellani", "Macali Roberto", "Lorenzo Salvatori", "Marco Falconetti", "Luca Galimberti", "Matteo Fratti"};
-
     static int numHouses = 4;
     static int houseSize = studentsName.length/numHouses;
 
@@ -33,7 +32,6 @@ public class MagicHat {
 
         System.out.printf("%50s %n","GRYFFINDOR");
         System.out.println(Arrays.toString(createGryffindor()));
-        System.out.println("\n");
 
     }
 
