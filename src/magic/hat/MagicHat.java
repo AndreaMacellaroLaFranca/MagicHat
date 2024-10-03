@@ -52,7 +52,7 @@ public class MagicHat {
         String[] ravenClaw = new String[7];
 
         for (int i = houseSize; i<2*houseSize; i++) {
-                ravenClaw[i-7] = studentsName[i];
+                ravenClaw[i-houseSize] = studentsName[i];
         }
         return ravenClaw;
     }
@@ -62,7 +62,7 @@ public class MagicHat {
         String[] slytherin = new String[7];
 
         for (int i = 2*houseSize; i<3*houseSize; i++) {
-                slytherin[i-14] = studentsName[i];
+                slytherin[i-houseSize*2] = studentsName[i];
         }
         return slytherin;
     }
@@ -72,7 +72,7 @@ public class MagicHat {
         String[] gryffindor = new String[8];
 
         for (int i = 3*houseSize; i<4*houseSize+1; i++) {
-                gryffindor[i-21] = studentsName[i];
+                gryffindor[i-houseSize*3] = studentsName[i];
         }
         return gryffindor;
     }
