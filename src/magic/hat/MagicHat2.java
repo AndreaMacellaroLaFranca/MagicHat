@@ -19,14 +19,12 @@ public class MagicHat2 {
             StringList.toArray(studentsName);
 
             //FORMATTAZIONE E STAMPA
-
             String hufflePuff = Arrays.toString(createHufflePuff());
             String ravenClaw = Arrays.toString(createRavenClaw());
             String slytherin = Arrays.toString(createSlytherin());
             String gryffindor = Arrays.toString(createGryffindor());
 
             System.out.printf("%-20s %-20s %-20s %-20s", "hufflePuff","ravenClaw","slytherin","gryffindor");
-
 
         }
 
