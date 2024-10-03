@@ -19,19 +19,19 @@ public class MagicHat {
         StringList.toArray(studentsName);
 
         //FORMATTAZIONE E STAMPA
-        System.out.printf("%50s\n","HUFFLEPUFF");
+        System.out.printf("%50s %n","HUFFLEPUFF");
         System.out.println(Arrays.toString(createHufflePuff()));
         System.out.println("\n");
 
-        System.out.printf("%50s\n","RAVENCLAW");
+        System.out.printf("%50s %n","RAVENCLAW");
         System.out.println(Arrays.toString(createRavenClaw()));
         System.out.println("\n");
 
-        System.out.printf("%50s\n","SLYTHERIN");
+        System.out.printf("%50s %n","SLYTHERIN");
         System.out.println(Arrays.toString(createSlytherin()));
         System.out.println("\n");
 
-        System.out.printf("%50s\n","GRYFFINDOR");
+        System.out.printf("%50s %n","GRYFFINDOR");
         System.out.println(Arrays.toString(createGryffindor()));
         System.out.println("\n");
 
